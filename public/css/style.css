@@ -1,0 +1,47 @@
+p{
+    color: white;
+}
+
+body{
+    background: #FFB30F;
+}
+
+.formAuthentication{
+    margin-top: 30vh;
+    margin-bottom: 20vh;
+}
+
+.form-group{
+    margin-bottom: 3vh;
+    width: 100%;
+}
+
+.buttonFinalizar{
+    width: 35%;
+    margin: 7.5%;
+}
+
+.group-button{
+    display: flex;
+}
+
+.bg-dark{
+    box-sizing: border-box;
+    height: 10vh;
+}
+
+.blackg{
+    text-align: center;
+    width: 100%;
+    padding-top: 1.5vh;
+    font-weight: bold;
+}
+
+.logo{
+    margin: 0;
+    position: absolute;
+    top: -25%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
