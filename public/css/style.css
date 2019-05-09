@@ -6,6 +6,14 @@ body{
     background: #FFB30F;
 }
 
+.backgroundLaranja{
+    background: #FFB30F;
+}
+
+.backgroundCinza{
+    background: #e9ecef;
+}
+
 .formAuthentication{
     margin-top: 30vh;
     margin-bottom: 20vh;
@@ -31,6 +39,7 @@ body{
 }
 
 .blackg{
+    
     text-align: center;
     width: 100%;
     padding-top: 1.5vh;

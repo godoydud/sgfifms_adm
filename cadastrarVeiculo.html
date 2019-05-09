@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastrar Veículo</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body class="backgroundCinza">
+    <nav class="navbar navbar-dark bg-dark">
+        <!-- Conteúdo do navbar -->
+        <p class="blackg">Cadastro de Veículos</p>
+    </nav>
+    <div class="jumbotron">
+
+        <form id="form">
+            <div class="form-group">
+                <label for="">Veículo</label>
+                <input type="text" class="form-control" id="nomeVeiculo" placeholder="Nome do Veículo">
+            </div>
+            <div class="form-group">
+                <label for="">Placa</label>
+                <input type="text" class="form-control" id="placaVeiculo" placeholder="Placa do Veículo">
+            </div>
+            <div class="form-group">
+                <label for="">Quilometragem</label>
+                <input type="number" class="form-control" id="kmVeiculo" placeholder="Quilometragem Atual do Veículo">
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success">Cadastrar</button>
+            </div>
+    
+    </form>
+</div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+<script src="public/js/firebase.js"></script>
+<script src="public/js/cadastrarVeiculo.js"></script>
+</html>

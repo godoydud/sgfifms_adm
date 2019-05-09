@@ -6,21 +6,6 @@ var createUserButton = document.getElementById('createUserButton');
 var userInput = document.getElementById('userInput');
 var passwordInput = document.getElementById('passwordInput');
 
-// // Criar novo usuário
-// createUserButton.addEventListener('click', function () {
-//     firebase
-//         .auth()
-//         .createUserWithEmailAndPassword(userInput.value, passwordInput.value)
-//         .then(function () {
-//             alert('Bem Vindo ' + userInput.value);
-//         })
-//         .catch(function (error) {
-//             console.error(error.code);
-//             console.error(error.message);
-//             alert('Falha ao cadastrar')
-//         })
-// })
-
 // Autenticar com email e senha
 loginUserButton.addEventListener('click', function () {
     firebase
