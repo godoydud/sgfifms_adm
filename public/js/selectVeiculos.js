@@ -17,6 +17,3 @@ const lista = () => {
 }
 
 lista()
-
-// document.getElementById('retorno').innerHTML = document.getElementById('retorno').innerHTML + 
-// `<option value="${snapshot.val()[i].veiculo}">${snapshot.val()[i].veiculo}</option>`
