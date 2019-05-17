@@ -54,3 +54,29 @@ body{
     margin-right: -50%;
     transform: translate(-50%, -50%) 
 }
+
+.logo2{
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+.opcoes{
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+.btnop{
+    width: 17em;
+}
+
+.retorno{
+    margin: 10px;
+}
