@@ -7,15 +7,27 @@
     <title>Tela Menu</title>
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
     <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
-<body class="backgroundLaranja">
+<body class="backgroundVerde">
     <img class="logo2" src="public/images/logo.png" alt="">
 
-    <div class="opcoes">
-            <button class="btnop btn btn-lg btn-block btn-primary" onclick="window.location.href='listar.html';" id="">Listar Viagens</button>
-            <button class="btnop btn btn-lg btn-block btn-primary" onclick="window.location.href='cadastrarUser.html';" id="">Cadastrar Usuário</button>
-            <button class="btnop btn btn-lg btn-block btn-primary" onclick="window.location.href='cadastrarVeiculo.html';" id="">Cadastrar Veículo</button>
+    <div class="opcoes input-group">
+            <button class="btnop btn btn-lg btn-block btn-primary" onclick="window.location.href='listar.html';" id=""><i class="fas fa-list-ul fa-2x"></i></button>
+            <div class="input-group-btn">
+                <button class="btnop btn btn-lg btn-block btn-primary" onclick="window.location.href='cadastrarUser.html';" id=""><i class="fas fa-user-plus fa-2x"></i></button>
+            </div> 
     </div>
+    
+    <div class="opcoes2 input-group">
+        <button class="btnop btn btn-lg btn-block btn-primary" onclick="window.location.href='cadastrarVeiculo.html';" id=""><i class="fas fa-bus-alt fa-2x"></i></button>
+        <div class="input-group-btn">
+            <button class="btnop btn btn-lg btn-block btn-primary" onclick="window.location.href='cadastrarUser.html';" id=""><i class="fas fa-edit fa-2x"></i></button>
+        </div> 
+</div>
+    
+    
+    
 
    
 </body>

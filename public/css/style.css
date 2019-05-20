@@ -2,12 +2,12 @@ p{
     color: white;
 }
 
-body{
+/* body{
     background: #FFB30F;
-}
+} */
 
-.backgroundLaranja{
-    background: #FFB30F;
+.backgroundVerde{
+    background: #2f9e41;
 }
 
 .backgroundCinza{
@@ -67,14 +67,41 @@ body{
 .opcoes{
     margin: 0;
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
-    margin-right: -50%;
+    right: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
     transform: translate(-50%, -50%) 
 }
 
+.opcoes2{
+    margin: 0;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    right: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    transform: translate(-50%, -50%)
+}
+
+.opcoes3{
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    right: 50%;
+    margin-left: 15%;
+    margin-right: 15%;
+    transform: translate(-50%, -50%)
+}
+
+
 .btnop{
-    width: 17em;
+    margin: 5px;
+    width: 2cm;
+    height: 2cm;
 }
 
 .retorno{
