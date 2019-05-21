@@ -64,6 +64,15 @@ p{
     transform: translate(-50%, -50%) 
 }
 
+.logo3{
+    margin: 0;
+    position: absolute;
+    margin-top: 50%;
+    top: 25%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
 .opcoes{
     margin: 0;
     position: absolute;
