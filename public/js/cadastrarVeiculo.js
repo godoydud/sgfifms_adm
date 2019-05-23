@@ -25,10 +25,6 @@ const buscaTamanho = async() => {
     await firebase.database().ref('veiculos/').once('value', function(snapshot) {
         id = snapshot.val().length
         console.log(snapshot.val());
-
-        console.log(`Id: ${id}`);
-
-
     })
 }
 
@@ -36,7 +32,7 @@ buscaTamanho()
 
 async function cadastrarVeiculo(nomeVeiculo, placaVeiculo, kmVeiculo) {
 
-    console.log(id);
+    
 
     await firebase.database().ref("veiculos/" + id).set({
         id: id,

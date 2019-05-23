@@ -1,9 +1,16 @@
+var teste
+
 const listarVeiculos = () => {
     firebase.database().ref('veiculos/').on('value', function (snapshot) {
+        let veiculos = (Object.entries(snapshot.val()))
+teste = veiculos
+        console.log(veiculos);
+        
+        
         let ul, li =[], button = []
-        for (let i = 1; i < snapshot.val().length; i++) {
-            ul = document.createElement('ul')
-            ul.id = snapshot.val()[i].idVeiculo
+        for (let i = 0; i < veiculos.length; i++) {
+            ul = document.createElement('ul') 
+            ul.id = veiculos[i][1].id
             li[0] = document.createElement('li')
             li[1] = document.createElement('li')
             li[2] = document.createElement('li')
@@ -12,11 +19,11 @@ const listarVeiculos = () => {
             button[1] = document.createElement('button')
             ul.className = 'list-group'
             li[0].className = 'text-center list-group-item active'
-            li[0].innerHTML = `${snapshot.val()[i].nomeVeiculo}`
-            li[1].className = 'text-center list-group-item'
-            li[1].innerHTML = `<strong>Placa: </strong>${snapshot.val()[i].placaVeiculo}`
-            li[2].className = 'text-center list-group-item'
-            li[2].innerHTML = `<strong>Quilometragem: </strong>${snapshot.val()[i].kmVeiculo}`
+            li[0].innerHTML = `${veiculos[i][1].nomeVeiculo}`
+            li[1].className = 'list-group-item'
+            li[1].innerHTML = `<strong>Placa: </strong>${veiculos[i][1].placaVeiculo}`
+            li[2].className = 'list-group-item'
+            li[2].innerHTML = `<strong>Quilometragem: </strong>${veiculos[i][1].kmVeiculo}`
             li[3].className = 'text-center list-group-item'
             li[3].innerHTML = ' '
        //     li[2].innerHTML =(document.createTextNode(snapshot.val()[i].kmVeiculo))
@@ -31,7 +38,7 @@ const listarVeiculos = () => {
             }) 
             button[1].addEventListener('click', (event) => {
                 // Função de deletar veículo
-                delete_user(event.target.parent)
+                delete_user(event.target.parentElement)
             }) 
 
             li[3].appendChild(button[0])
@@ -65,9 +72,12 @@ const listarVeiculos = () => {
 listarVeiculos()
 
 function delete_user(element) {
- let ul = element.parent;
+   
+ let ul = element.parentElement;
+ 
 
     firebase.database().ref().child('veiculos/' + ul.id).remove();
     window.confirm("Tem certeza que deseja excluir o veículo?")
     alert('Veículo excluído com sucesso!');
+
 }
