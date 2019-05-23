@@ -7,14 +7,19 @@ const listarVeiculos = () => {
             li[0] = document.createElement('li')
             li[1] = document.createElement('li')
             li[2] = document.createElement('li')
+            li[3] = document.createElement('li')
             button[0] = document.createElement('button')
             button[1] = document.createElement('button')
+            ul.className = 'list-group'
             li[0].className = 'text-center list-group-item active'
             li[0].innerHTML = `${snapshot.val()[i].nomeVeiculo}`
             li[1].className = 'text-center list-group-item'
             li[1].innerHTML = `<strong>Placa: </strong>${snapshot.val()[i].placaVeiculo}`
             li[2].className = 'text-center list-group-item'
-            li[2].innerHTML =(document.createTextNode(snapshot.val()[i].kmVeiculo))
+            li[2].innerHTML = `<strong>Quilometragem: </strong>${snapshot.val()[i].kmVeiculo}`
+            li[3].className = 'text-center list-group-item'
+            li[3].innerHTML = ' '
+       //     li[2].innerHTML =(document.createTextNode(snapshot.val()[i].kmVeiculo))
             button[0].className = 'btn btn-info'
             button[1].className = 'btn btn-danger'
             button[0].type = 'button'
@@ -29,11 +34,12 @@ const listarVeiculos = () => {
                 delete_user(event.target.parent)
             }) 
 
-            li[2].appendChild(button[0])
-            li[2].appendChild(button[1])
+            li[3].appendChild(button[0])
+            li[3].appendChild(button[1])
             ul.appendChild(li[0])
             ul.appendChild(li[1])
             ul.appendChild(li[2])
+            ul.appendChild(li[3])
 
 
             document.getElementById('return').appendChild(ul)
