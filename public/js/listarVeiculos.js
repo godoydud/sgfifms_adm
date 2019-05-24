@@ -35,6 +35,8 @@ teste = veiculos
             button[1].innerHTML = '<i class="far fa-trash-alt"></i>'
             button[0].addEventListener('click', () => {
                 // Função de editar veículo
+                window.location.replace('editarVeiculo.html')
+                
             }) 
             button[1].addEventListener('click', (event) => {
                 // Função de deletar veículo
