@@ -2,7 +2,7 @@
 const preencheDados = () => {
 
 
-    let db = firebase.database().ref(`veiculos/` + id)
+    let db = firebase.database().ref(`veiculos/${sessionStorage.id}`)
     db.on('value', (snapshot) => {
         document.getElementsByTagName('input')[0].value = snapshot.val().nomeVeiculo
         document.getElementsByTagName('input')[1].value = snapshot.val().placaVeiculo
@@ -26,7 +26,7 @@ const atualizaDados = async() => {
        
 
         window.location.replace("listarVeiculos.html");
-    alert('Veículo editaco com sucesso!')
+    alert('Veículo editado com sucesso!')
     }
 
 

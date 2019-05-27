@@ -2,11 +2,12 @@ const listaVeiculos = () => {
     console.log("Entrou na listagem de veìculos");
 
     firebase.database().ref('veiculos/').once('value', function (snapshot) {
-        for (let i = 1; i < snapshot.val().length; i++) {
+        let veiculos = (Object.entries(snapshot.val()))
+        for (let i = 0; i < veiculos.length; i++) {
             console.log(snapshot.val());
 
             document.getElementById('veiculos').innerHTML = document.getElementById('veiculos').innerHTML +
-                `<option value="${snapshot.val()[i].placaVeiculo}">${snapshot.val()[i].placaVeiculo}</option>`
+                `<option value="${veiculos[i][1].placaVeiculo}">${veiculos[i][1].placaVeiculo}</option>`
         }
     })
 

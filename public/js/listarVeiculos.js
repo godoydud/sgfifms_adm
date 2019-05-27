@@ -35,6 +35,7 @@ teste = veiculos
             button[1].innerHTML = '<i class="far fa-trash-alt"></i>'
             button[0].addEventListener('click', () => {
                 // Função de editar veículo
+                
                 window.location.replace('editarVeiculo.html')
                 
             }) 
@@ -82,4 +83,23 @@ function delete_user(element) {
     window.confirm("Tem certeza que deseja excluir o veículo?")
     alert('Veículo excluído com sucesso!');
 
+}
+
+function update_user(elementId) {
+    window.location.replace('editarVeiculo.html')
+
+    const preencheDados = () => {
+
+
+        let db = firebase.database().ref(`veiculos/${sessionStorage.id}`)
+        db.on('value', (snapshot) => {
+            document.getElementsByTagName('input')[0].value = snapshot.val().nomeVeiculo
+            document.getElementsByTagName('input')[1].value = snapshot.val().placaVeiculo
+            document.getElementsByTagName('input')[2].value = snapshot.val().kmVeiculo
+        })
+    }
+    
+    
+    window.onload = preencheDados()
+    
 }
