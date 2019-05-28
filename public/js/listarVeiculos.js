@@ -1,11 +1,8 @@
-var teste
 
 const listarVeiculos = () => {
     firebase.database().ref('veiculos/').on('value', function (snapshot) {
         let veiculos = (Object.entries(snapshot.val()))
-teste = veiculos
-        console.log(veiculos);
-        
+
         
         let ul, li =[], button = []
         for (let i = 0; i < veiculos.length; i++) {
@@ -33,18 +30,24 @@ teste = veiculos
             button[1].type = 'button'
             button[0].innerHTML = 'Editar'
             button[1].innerHTML = 'Deletar'
-            button[0].addEventListener('click', () => {
+            button[0].addEventListener('click', (event) => {
                 // Função de editar veículo
+                let ul = event.target.parentElement.parentElement;
                 
+                
+                
+                sessionStorage.idVeiculo = ul.id
                 window.location.replace('editarVeiculo.html')
-                
             }) 
-            button[1].addEventListener('click', (event) => {
+            button[1].addEventListener('click', async (event) => {
+                let ul = event.target.parentElement.parentElement;
                 // Função de deletar veículo
                 var r = confirm("Deseja deletar o veículo selecionado?");
-                if (r == true) {
-                alert("Veículo deletado com sucesso!")
-                delete_user(event.target.parentElement)
+                if (r) {
+                    
+                    await firebase.database().ref().child('veiculos/' + ul.id).remove();
+                    alert("Veículo deletado com sucesso!")
+                    document.location.reload(true)
                 } else {
                 alert("Você cancelou a exclusão.")
                 }
@@ -84,29 +87,10 @@ function delete_user(element) {
    
  let ul = element.parentElement;
  
-    console.log(ul.id);
+    
     
     firebase.database().ref().child('veiculos/' + ul.id).remove();
     //window.confirm("Tem certeza que deseja excluir o veículo?")
     //alert('Veículo excluído com sucesso!');
 
-}
-
-function update_user(elementId) {
-    window.location.replace('editarVeiculo.html')
-
-    const preencheDados = () => {
-
-
-        let db = firebase.database().ref(`veiculos/${sessionStorage.id}`)
-        db.on('value', (snapshot) => {
-            document.getElementsByTagName('input')[0].value = snapshot.val().nomeVeiculo
-            document.getElementsByTagName('input')[1].value = snapshot.val().placaVeiculo
-            document.getElementsByTagName('input')[2].value = snapshot.val().kmVeiculo
-        })
-    }
-    
-    
-    window.onload = preencheDados()
-    
 }

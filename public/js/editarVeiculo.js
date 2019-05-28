@@ -2,7 +2,7 @@
 const preencheDados = () => {
 
 
-    let db = firebase.database().ref(`veiculos/${sessionStorage.id}`)
+    let db = firebase.database().ref(`veiculos/${sessionStorage.idVeiculo}`)
     db.on('value', (snapshot) => {
         document.getElementsByTagName('input')[0].value = snapshot.val().nomeVeiculo
         document.getElementsByTagName('input')[1].value = snapshot.val().placaVeiculo
@@ -11,13 +11,16 @@ const preencheDados = () => {
 }
 
 
+
+
 window.onload = preencheDados()
 
 
 
 const atualizaDados = async() => {
 
-        await firebase.database().ref(`veiculos/${sessionStorage.id}`).set({
+        await firebase.database().ref(`veiculos/${sessionStorage.idVeiculo}`).set({
+            id: sessionStorage.idVeiculo,
             nomeVeiculo: document.getElementsByTagName('input')[0].value,
             placaVeiculo: document.getElementsByTagName('input')[1].value,
             kmVeiculo: document.getElementsByTagName('input')[2].value,
