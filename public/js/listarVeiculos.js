@@ -31,8 +31,8 @@ teste = veiculos
             button[1].className = 'btn btn-danger'
             button[0].type = 'button'
             button[1].type = 'button'
-            button[0].innerHTML = '<i class="far fa-edit"></i>'
-            button[1].innerHTML = '<i class="far fa-trash-alt"></i>'
+            button[0].innerHTML = 'Editar'
+            button[1].innerHTML = 'Deletar'
             button[0].addEventListener('click', () => {
                 // Função de editar veículo
                 
@@ -41,7 +41,13 @@ teste = veiculos
             }) 
             button[1].addEventListener('click', (event) => {
                 // Função de deletar veículo
+                var r = confirm("Deseja deletar o veículo selecionado?");
+                if (r == true) {
+                alert("Veículo deletado com sucesso!")
                 delete_user(event.target.parentElement)
+                } else {
+                alert("Você cancelou a exclusão.")
+                }
             }) 
 
             li[3].appendChild(button[0])
@@ -78,10 +84,11 @@ function delete_user(element) {
    
  let ul = element.parentElement;
  
-
+    console.log(ul.id);
+    
     firebase.database().ref().child('veiculos/' + ul.id).remove();
-    window.confirm("Tem certeza que deseja excluir o veículo?")
-    alert('Veículo excluído com sucesso!');
+    //window.confirm("Tem certeza que deseja excluir o veículo?")
+    //alert('Veículo excluído com sucesso!');
 
 }
 
