@@ -14,7 +14,7 @@ const listarVeiculos = () => {
             li[3] = document.createElement('li')
             button[0] = document.createElement('button')
             button[1] = document.createElement('button')
-            ul.className = 'list-group'
+            ul.className = 'styleUl'
             li[0].className = 'text-center list-group-item active'
             li[0].innerHTML = `${veiculos[i][1].nomeVeiculo}`
             li[1].className = 'list-group-item'
