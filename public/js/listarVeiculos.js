@@ -14,6 +14,7 @@ const listarVeiculos = () => {
             li[3] = document.createElement('li')
             button[0] = document.createElement('button')
             button[1] = document.createElement('button')
+            ul.className = 'padding0'
             li[0].className = 'text-center list-group-item active'
             li[0].innerHTML = `${veiculos[i][1].nomeVeiculo}`
             li[1].className = 'list-group-item'
@@ -22,8 +23,8 @@ const listarVeiculos = () => {
             li[2].innerHTML = `<strong>Quilometragem: </strong>${veiculos[i][1].kmVeiculo}`
             li[3].className = 'text-center list-group-item'
             li[3].innerHTML = ' '
-            button[0].className = 'btn btn-info'
-            button[1].className = 'btn btn-danger'
+            button[0].className = 'marginBtn btn btn-info'
+            button[1].className = 'marginBtn btn btn-danger'
             button[0].type = 'button'
             button[1].type = 'button'
             button[0].innerHTML = 'Editar'
