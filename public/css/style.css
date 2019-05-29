@@ -107,13 +107,24 @@ p{
 }
 
 
-.btnop{
-    margin: 5px;
-    width: 2cm;
-    height: 2cm;
+.botao{
+    margin: 10px;
+    width: 300px
+}
+
+.divBotoes{
+    margin-top: 200px;
 }
 
 .retorno{
     margin: 5px;
 }
 
+.logo4{
+    margin: 0;
+    position: absolute;
+    margin-top: 5%;
+    top: 25%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
