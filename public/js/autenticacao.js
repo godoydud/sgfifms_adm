@@ -15,7 +15,7 @@ loginUserButton.addEventListener('click', function () {
         console.log(result);
         alert('Autenticado como ' + userInput.value);
         localStorage.user = userInput.value;
-        window.location.href = "registro.html";
+        window.location.href = "index.html";
     })
     .catch(function (error) {
         console.error(error.code);
