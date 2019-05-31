@@ -38,6 +38,8 @@ const criarCards = () => {
             <li class="list-group-item"><strong>Finalidade: </strong>${snapshot.val()[i].finalidade}</li>
             <li class="list-group-item"><strong>Hora Saída: </strong>${snapshot.val()[i].hrSaida}</li>
             <li class="list-group-item"><strong>Data Saída: </strong>${snapshot.val()[i].dtSaida}</li>
+            <li class="list-group-item"><strong>Hora Chegada: </strong>${snapshot.val()[i].hrChegada}</li>
+            <li class="list-group-item"><strong>Data Chegada: </strong>${snapshot.val()[i].dtChegada}</li>
         </ul>
 
     <br></br>

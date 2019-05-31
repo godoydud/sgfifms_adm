@@ -155,3 +155,25 @@ a:active {
 .labelInformativo{
     margin: 15px
 }
+
+.formatText{
+    margin: 0;
+    position: absolute;
+    margin-top: 80%;
+    top: 25%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: black
+}
+
+.formatText2{
+    margin: 0;
+    position: absolute;
+    margin-top: 85%;
+    top: 25%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: black
+}
