@@ -181,3 +181,8 @@ a:active {
 .textoBranco{
     color: white
 }
+
+.sobre{
+    margin: 20px;
+    justify-content: left
+}
