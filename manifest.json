@@ -8,7 +8,7 @@
     "short_name" : "ADM SGF-IFMS",
     "theme_color" : "transparent",
     "description" : "Controle do uso de frotas do IFMS Campus Nova Andradina para Administradores",
-    "orientation" : "portrait-primary",
+    "orientation" : "portrait",
     "background_color" : "#2f9e41",
     "icons": [
       {
