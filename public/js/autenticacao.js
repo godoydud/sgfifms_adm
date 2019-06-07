@@ -5,9 +5,16 @@ var createUserButton = document.getElementById('createUserButton');
 // Inputs
 var userInput = document.getElementById('userInput');
 var passwordInput = document.getElementById('passwordInput');
+ 
+
+    
 
 // Autenticar com email e senha
 loginUserButton.addEventListener('click', function () {
+   if(userInput.value != "eduardo.fuso@novaandradina.org"){     
+        alert("Esse usuário não possui privilégios de administrador!")
+        window.location.replace('autenticacao.html')
+    }
     firebase
     .auth()
     .signInWithEmailAndPassword(userInput.value, passwordInput.value)
