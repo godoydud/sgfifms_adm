@@ -192,6 +192,7 @@ a:active {
 }
 
 .sobre{
-    margin: 20px;
+    margin: 3em;
+    margin-top: -2px;
     justify-content: left
 }
